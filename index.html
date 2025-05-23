@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FindThings</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    <div class="container mx-auto p-4 pt-6 md:p-6 lg:p-12">
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">FindThings</h1>
+
+        <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <div class="mb-4 md:flex md:items-center">
+                <div class="md:w-1/2 mb-4 md:mb-0 md:mr-2">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="searchInput">
+                        Search
+                    </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="searchInput" type="text" placeholder="Enter keyword...">
+                </div>
+                <div class="md:w-1/4 mb-4 md:mb-0 md:mx-2">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="categoryFilter">
+                        Category
+                    </label>
+                    <select id="categoryFilter" class="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        <option value="all">All</option>
+                        {/* Options will be populated by JavaScript */}
+                    </select>
+                </div>
+                <div class="md:w-1/4 md:ml-2 flex items-end">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full" id="searchButton">
+                        Search
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="resultsContainer" class="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {/* Results will be displayed here */}
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
